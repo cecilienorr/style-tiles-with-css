@@ -1,9 +1,5 @@
 /* change these */
 
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400italic,800italic,400,800");
-/* @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap'); */
-@import url("https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic");
-
 * {
   box-sizing: border-box;
 }
@@ -14,15 +10,16 @@ use the fonts in other ways in the font hierarchy etc. */
 
 /* change these */
 :root {
-  --bg-color: red;
-  --link-color: green;
-  --link-hover-color: blue;
-  --color-4: hotpink;
-  --color-5: rebeccapurple;
+  --color-1: #5b647d;
+  --color-2: #ffa6c1;
+  --color-3: #99d98c;
+  --color-4: #90caf9;
+  --color-5: #ffee99;
 
-  --primary-font: "Open Sans", sans-serif;
-  --secondary-font: "Droid Serif", serif;
-  --main-text-color: #000;
+  --header-font: "WindSong", cursive;
+  --primary-font: "Klee One", sans-serif;
+  /* --secondary-font: "Droid Serif", serif; */
+  --main-text-color: #5b647d;
 
   --white-space: 1rem;
 }
@@ -34,17 +31,19 @@ a {
   transition: all 3s;
 }
 button:hover {
-  background-color: var(--link-hover-color);
-  transform: scale(3) rotate(40deg);
+  background-color: #5fa8d3;
 }
 
 button:active {
-  background-color: var(--bg-color);
+  background-color: var(--color-4);
 }
 
 a:hover {
-  color: var(--link-hover-color);
-  font-size: 4rem;
+  color: white;
+  font-size: 1.5rem;
+  background-color: var(--color-4);
+  text-align: center;
+  padding: 5px;
 }
 html {
   font-size: 100%;
@@ -65,23 +64,22 @@ footer {
 }
 
 .full-width {
-  background: var(--bg-color);
-  color: white;
+  background: var(--color-1);
+  color: #efe6f3;
   width: 100%;
 }
 
 .header-wrapper h1 {
   font-size: 3rem;
-  text-transform: uppercase;
   letter-spacing: -2px;
   padding-right: 0.75em;
-  font-weight: bold;
-  color: white;
+  font-family: var(--header-font);
+  color: #efe6f3;
 }
 
 .header-wrapper h2 {
   font-size: 1.6em;
-  color: rgba(255, 255, 255, 0.95);
+  color: #efe6f3;
   font-weight: bold;
   margin: var(--white-space) 0;
 }
@@ -89,14 +87,18 @@ footer {
 .header-wrapper h3 {
   font-size: 1.2rem;
   font-style: italic;
+  color: #efe6f3;
+  padding-bottom: 5px;
 }
 
 .header-wrapper h4 {
   font-size: 0.8rem;
+  color: #efe6f3;
 }
 
 main {
   padding: calc(2 * var(--white-space));
+  background-color: #efe6f3;
 }
 
 section {
@@ -104,10 +106,10 @@ section {
 }
 
 .section-heading {
-  font-style: italic;
   font-size: 1.3rem;
-  color: #777;
+  color: var(--color-1);
   margin: 0.5rem 0;
+  font-family: var(--primary-font);
 }
 
 ul {
@@ -126,15 +128,15 @@ ul li:last-child {
 }
 
 .color-swatch-1 {
-  background-color: var(--bg-color);
+  background-color: var(--color-1);
 }
 
 .color-swatch-2 {
-  background-color: var(--link-color);
+  background-color: var(--color-2);
 }
 
 .color-swatch-3 {
-  background-color: var(--link-hover-color);
+  background-color: var(--color-3);
 }
 
 .color-swatch-4 {
@@ -151,20 +153,17 @@ ul li:last-child {
   margin-right: 5vw;
 }
 
-.texture-swatch-1 {
-  background: url(../img/pw_maze_white.png) top left repeat;
-}
-
 .texture-swatch-2 {
-  background: url(../img/subtle_grunge.png) top left repeat;
+  background: url(../img/sprinklestexture.jpeg) center center repeat;
 }
 
 .texture-swatch-1 {
-  background: url(../img/pw_maze_white.png) top left repeat;
+  background: url(../img/White-Chocolate-Buttercream-Frosting-Recipe-Easy-with-2-Ingredients-2.jpeg)
+    center center repeat;
 }
 
 .texture-swatch-3 {
-  background: url(../img/white_paperboard.png) top left repeat;
+  background: url(../img/cake_edited.jpg) top left repeat;
 }
 
 .images ul {
@@ -181,21 +180,20 @@ ul li:last-child {
 button {
   padding: 1rem;
   border-radius: 4px;
-  background: var(--link-color);
+  background: var(--color-4);
   text-align: center;
   text-decoration: none;
-  font: bold 1.25em/1 var(--primary-font);
+  /* font-family: "Roboto Condensed", sans-serif; */
   letter-spacing: 1px;
   color: white;
-  text-transform: uppercase;
-  text-shadow: 0px -1px 0px #0374a0;
   transition: all 0.2s ease;
   cursor: pointer;
   margin: 0 1rem 1rem 0;
+  border: none;
 }
 
-.secondary-button {
-  background: var(--color-5);
+span {
+  margin-left: 1rem;
 }
 
 button:focus,
@@ -210,8 +208,8 @@ button:focus-within {
 }
 
 .h1-sample {
+  font-family: var(--header-font);
   font-size: 2.4rem;
-  font-weight: bold;
 }
 
 .h2-sample {
@@ -236,7 +234,7 @@ em {
 
 a {
   font-family: var(--primary-font);
-  color: var(--link-color);
+  color: var(--color-4);
   font-weight: bold;
   text-decoration: none;
   transition: all 0.2s;
